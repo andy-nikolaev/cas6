@@ -11,7 +11,7 @@ buildscript {
             url project.privateRepoUrl
             credentials {
               username = project.privateRepoUsername
-              password = System.env.PRIVATE_REPO_TOKEN
+              password = project.privateRepoPassword
             }
           }
         }
@@ -41,9 +41,9 @@ buildscript {
 }
 
 plugins {
-    id 'java-library'
+//    id 'java-library'
     id 'maven-publish'
-    id 'war'
+//    id 'war'
 }
 
 repositories {
@@ -103,8 +103,8 @@ configurations.all {
 
 war {
     entryCompression = ZipEntryCompression.STORED
-    enabled = true
-    //enabled = false
+    //enabled = true
+    enabled = false
 }
 
 sourceSets {
@@ -194,10 +194,10 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/andy-nikolaev/cas65")
+            url = uri("https://maven.pkg.github.com/andy-nikolaev/cas6")
             credentials {
                 username = "ÄndyNikolaev"
-                password = "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"
+                password = "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"
             }
         }
     }
@@ -205,8 +205,8 @@ publishing {
     publications {
         gpr(MavenPublication) {
         //gpr(MavenPublication) {
-            from components.java
-            //from components.web
+            //from components.java
+            from components.web
         }
     }
 }
