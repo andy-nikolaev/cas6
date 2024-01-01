@@ -48,6 +48,6 @@ jobs:
         arguments: publish
       #run: ./gradlew publish
       env:
-        USERNAME: "AndyNikolaev"
-        #USERNAME: ${{ github.actor }}
+        #USERNAME: "AndyNikolaev"
+        USERNAME: ${{ github.actor }}
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
