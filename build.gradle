@@ -197,7 +197,7 @@ publishing {
             url = uri("https://maven.pkg.github.com/andy-nikolaev/cas6")
             credentials {
                 username = "ÄndyNikolaev"
-                password = "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"
+                password = "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"
             }
         }
     }
